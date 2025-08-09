@@ -12,16 +12,24 @@
 /* Floating logo above section */
 .hero__logo {
   position: absolute;
-  top: -80px; /* push it further out */
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 420px; /* triple size (was ~140px) */
+  width: auto; /* fit logo size */
   height: auto;
   background: linear-gradient(135deg, #f5faff, #ffffff); /* match hero background */
-  padding: 16px 28px;
-  border-radius: 16px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 8px 12px; /* small padding around logo */
+  border-radius: 12px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  display: inline-block;
 }
+
+.hero__logo img {
+  width: 420px; /* triple logo size */
+  height: auto;
+  display: block;
+}
+
 
 
 /* Heading & text */
