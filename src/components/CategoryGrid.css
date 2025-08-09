@@ -8,22 +8,26 @@
 }
 
 .card {
-  height: 180px; /* increased height for bigger icons */
+  height: 180px;
   background: #f7f7f7;
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px; /* more gap between icon and text */
+  gap: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card img {
-  width: 110px; /* bigger icons */
-  height: 110px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  padding: 12px;
+  border: 2px solid #007bff; /* blue border */
+  border-radius: 8px; /* rectangular corners */
+  background: #fff;
 }
 
 .card span {
@@ -33,6 +37,6 @@
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.05); /* slightly bigger zoom */
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
