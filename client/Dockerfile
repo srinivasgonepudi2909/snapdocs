@@ -1,7 +1,7 @@
 # Stage 1: Build dependencies
 FROM node:18-alpine AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm ci
 
 # Stage 2: Build the app
