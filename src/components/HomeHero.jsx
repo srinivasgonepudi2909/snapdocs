@@ -1,10 +1,14 @@
 import React from "react";
 import "./HomeHero.css";
+import heroLogo from "../assets/icons/snapdocs-logo.png";
 
 export default function HomeHero() {
   return (
     <section className="hero">
-      <img src={heroLogo} alt="SnapDocs" className="hero-logo-mini" />
+      <div className="hero__logo">
+        <img src={heroLogo} alt="SnapDocs" />
+      </div>
+
       <h1>Securely Store Valuable Documents</h1>
       <p>
         Sign up, create folders, and keep your study certificates, IDs, property

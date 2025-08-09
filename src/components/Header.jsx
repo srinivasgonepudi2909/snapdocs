@@ -1,16 +1,17 @@
 import React from "react";
-import "./HomeHero.css";
+import "./Header.css";
 
-export default function HomeHero() {
+export default function Header() {
   return (
-    <section className="hero">
-      <img src={heroLogo} alt="SnapDocs" className="hero-logo-mini" />
-      <h1>Securely Store Valuable Documents</h1>
-      <p>
-        Sign up, create folders, and keep your study certificates, IDs, property
-        papers and more—safe and organized.
-      </p>
-      <a className="cta" href="/signup">Get Started</a>
-    </section>
+    <header className="sd-header">
+      {/* Left side brand removed */}
+      <div></div> 
+
+      {/* Right side navigation */}
+      <div className="sd-nav-right">
+        <a href="/login" className="sd-btn sd-btn--blue-outline">Login</a>
+        <a href="/signup" className="sd-btn sd-btn--blue">Sign Up</a>
+      </div>
+    </header>
   );
 }
