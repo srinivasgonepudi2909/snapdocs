@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeHero.css";
-import logo from "../assets/icons/snapdocs-logo.png";
+import logo from "../assets/icons/SnapDocs-logo.png";
 
 export default function HomeHero() {
   return (
