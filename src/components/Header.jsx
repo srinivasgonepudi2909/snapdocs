@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import logo from "../icons/snapdocs-logo.png"; // put your logo here (see step 4)
+import logo from "../assets/icons/snapdocs-logo.png"; // put your logo here (see step 4)
 
 export default function Header() {
   return (
