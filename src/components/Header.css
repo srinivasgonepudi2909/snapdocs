@@ -25,11 +25,14 @@
 }
 
 .sd-brand__name {
-  font-weight: 800;         /* bolder */
-  letter-spacing: .3px;     /* a bit more space between letters */
-  font-size: 24px;          /* bigger size */
-  color: #007bff;           /* blue text */
+  font-weight: 800;          /* bold like HCLTech */
+  font-size: 28px;           /* larger text */
+  color: #0066cc;            /* HCLTech-like blue */
+  letter-spacing: 0.5px;     /* slightly more space between letters */
+  text-transform: none;      /* keep SnapDocs format */
+  line-height: 1;
 }
+
 
 
 /* Right side nav */
