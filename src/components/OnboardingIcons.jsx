@@ -1,30 +1,27 @@
-import React from 'react';
-import uploadIcon from '../assets/icons/upload.png';
-import secureIcon from '../assets/icons/secure.svg';
-import shareIcon from '../assets/icons/share.svg';
-import './OnboardingIcons.css';
+import React from "react";
+import "./OnboardingIcons.css";
 
-const OnboardingIcons = () => {
-  const steps = [
-    { icon: uploadIcon, alt: 'Upload' },
-    { icon: secureIcon, alt: 'Secure' },
-    { icon: shareIcon, alt: 'Share' },
+import studyIcon from "../assets/icons/study-certificate.png";
+import idIcon from "../assets/icons/id.png";
+import propertyIcon from "../assets/icons/property.png";
+import otherIcon from "../assets/icons/Docs.png";
+
+export default function OnboardingIcons() {
+  const icons = [
+    { src: studyIcon, label: "Study Certificate" },
+    { src: idIcon, label: "ID" },
+    { src: propertyIcon, label: "Property" },
+    { src: otherIcon, label: "Other" }
   ];
 
   return (
     <div className="onboarding-container">
-      {steps.map((step, index) => (
-        <div
-          key={index}
-          className="icon-box fade-in"
-          style={{ '--i': index }}
-        >
-          <img src={step.icon} alt={step.alt} className="icon-img" />
-          <div className="icon-label">{step.alt}</div>
+      {icons.map((icon, i) => (
+        <div className="icon-box" key={i}>
+          <img src={icon.src} alt={icon.label} className="icon-img" />
+          <div className="icon-label">{icon.label}</div>
         </div>
       ))}
     </div>
   );
-};
-
-export default OnboardingIcons;
+}
