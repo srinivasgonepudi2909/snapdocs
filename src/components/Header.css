@@ -1,0 +1,35 @@
+.sd-header {
+  position: sticky; top: 0; z-index: 50;
+  height: 64px; display: flex; align-items: center;
+  padding: 0 20px; background: #ffffff; border-bottom: 1px solid #eee;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* pushes content to the right so brand sits on the right side */
+.sd-header__spacer { flex: 1; }
+
+.sd-header__right {
+  display: flex; align-items: center; gap: 24px;
+}
+
+.sd-brand { display: flex; align-items: center; gap: 10px; }
+.sd-brand__logo { width: 28px; height: 28px; }
+.sd-brand__name { font-weight: 700; letter-spacing: .2px; font-size: 18px; }
+
+.sd-nav { display: flex; gap: 10px; }
+
+.sd-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 36px; padding: 0 14px; border-radius: 10px; text-decoration: none;
+  font-weight: 600; border: 1px solid transparent; transition: all .15s ease;
+}
+
+.sd-btn--ghost {
+  background: transparent; border-color: #d5d5d5; color: #111;
+}
+.sd-btn--ghost:hover { background: #f3f3f3; }
+
+.sd-btn--primary {
+  background: #111; color: #fff;
+}
+.sd-btn--primary:hover { filter: brightness(1.05); }

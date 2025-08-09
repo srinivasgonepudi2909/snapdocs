@@ -1,14 +1,15 @@
-import React from 'react';
-import OnboardingIcons from './components/OnboardingIcons';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+// …other imports
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <h1 className="app-title">Welcome to Your Secure Vault</h1>
-      <OnboardingIcons />
-    </div>
+    <>
+      <Header />
+      {/* existing landing content stays as-is */}
+      <main>
+        {/* your Upload / Secure / Share content */}
+      </main>
+    </>
   );
 }
-
-export default App;
