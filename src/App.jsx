@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import HomeHero from "./components/HomeHero";
 import CategoryGrid from "./components/CategoryGrid";
-import WhyChoose from "./components/WhyChoose"; // <-- import new section
+import WhyChooseUs from "./components/WhyChooseUs"; // ✅ Add this
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       <main>
         <HomeHero />
         <CategoryGrid />
-        <WhyChoose /> {/* <-- added here */}
+        <WhyChooseUs /> {/* ✅ Added */}
       </main>
     </>
   );
