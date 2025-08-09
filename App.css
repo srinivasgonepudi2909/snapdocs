@@ -1,0 +1,13 @@
+.app {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.app-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
