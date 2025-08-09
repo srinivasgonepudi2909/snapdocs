@@ -1,14 +1,15 @@
 import React from "react";
 import Header from "./components/Header";
-// …other imports
+import HomeHero from "./components/HomeHero";
+import CategoryGrid from "./components/CategoryGrid";
 
 export default function App() {
   return (
     <>
       <Header />
-      {/* existing landing content stays as-is */}
       <main>
-        {/* your Upload / Secure / Share content */}
+        <HomeHero />
+        <CategoryGrid />
       </main>
     </>
   );
