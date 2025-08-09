@@ -1,17 +1,12 @@
-# Stage 1: Build dependencies
-FROM node:18-alpine AS deps
-WORKDIR /app
-COPY package.json ./
-RUN npm install
-
-# Stage 2: Build the app
+# Stage 1: Build the app
 FROM node:18-alpine AS builder
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+COPY package.json ./           
+RUN npm install               # Install dependencies (no lockfile needed)
 COPY . .
 RUN npm run build
 
-# Stage 3: Production image
+# Stage 2: Production image
 FROM nginx:alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
