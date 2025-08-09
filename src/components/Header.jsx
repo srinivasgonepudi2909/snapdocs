@@ -1,25 +1,19 @@
 import React from "react";
-import "./Header.css";
-import logo from "../assets/icons/SnapDocs_logo.png";
+import "./HomeHero.css";
+import logo from "../assets/icons/snapdocs-logo.png";
 
-export default function Header() {
+export default function HomeHero() {
   return (
-    <header className="sd-header">
-      {/* Left side: Logo + App name */}
-      <a href="/" className="sd-brand" aria-label="SnapDocs Home">
-        <img src={logo} alt="SnapDocs logo" className="sd-brand__logo" />
-        <span className="sd-brand__name">SnapDocs</span>
-      </a>
-
-      {/* Right side: Navigation */}
-      <nav className="sd-nav-right" aria-label="Main navigation">
-        <a className="sd-btn sd-btn--blue-outline" href="/login">
-          Login
-        </a>
-        <a className="sd-btn sd-btn--blue" href="/signup">
-          Sign up
-        </a>
-      </nav>
-    </header>
+    <section className="hero">
+      <div className="hero__logo">
+        <img src={logo} alt="SnapDocs Logo" />
+      </div>
+      <h1>Securely Store Valuable Documents</h1>
+      <p>
+        Sign up, create folders, and keep your study certificates, IDs, property papers and more—
+        safe and organized.
+      </p>
+      <a className="cta" href="/signup">Get Started</a>
+    </section>
   );
 }

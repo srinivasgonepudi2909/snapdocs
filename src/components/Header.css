@@ -1,30 +1,31 @@
+/* ===== Header ===== */
 .sd-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 72px; /* a bit taller for the big brand */
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 28px; /* more breathing room */
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0 28px;
+  background: rgba(255, 255, 255, 0.9);   /* slight translucency */
+  backdrop-filter: saturate(160%) blur(6px);
+  border-bottom: 1px solid #e9e9e9;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Brand (logo + name) */
+/* ===== Brand (logo + name) ===== */
 .sd-brand {
   display: inline-flex;
   align-items: center;
   gap: 14px;
   text-decoration: none;
+  user-select: none;
 }
 
-.sd-brand:hover {
-  opacity: 0.92;
-}
+.sd-brand:hover { opacity: 0.95; }
 
 .sd-brand__logo {
   width: 40px;
@@ -34,82 +35,72 @@
 
 .sd-brand__name {
   font-weight: 800;
-  font-size: 32px; /* big, bold brand name */
-  color: #0066cc; /* brand blue */
+  font-size: 32px;
+  color: #0066cc;
   letter-spacing: 0.5px;
   line-height: 1;
   white-space: nowrap;
 }
 
-/* Right side nav */
+/* ===== Right side nav ===== */
 .sd-nav-right {
   display: inline-flex;
   gap: 14px;
   align-items: center;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 .sd-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 40px;
   padding: 0 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
-  transform: scale(1);
   border: 1px solid transparent;
+  transform: scale(1);
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease, border-color .18s ease;
+  will-change: transform;
 }
 
-/* Hover/active/keyboard focus */
-.sd-btn:hover {
-  transform: scale(1.08);
-}
-.sd-btn:active {
-  transform: scale(0.98);
-}
+.sd-btn:hover { transform: scale(1.08); }
+.sd-btn:active { transform: scale(0.98); }
+
 .sd-btn:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(0,123,255,.35);
 }
 
-/* Solid blue button */
+/* Solid blue */
 .sd-btn--blue {
   background: #007bff;
   color: #fff;
 }
-.sd-btn--blue:hover {
-  background: #0069d9;
-}
+.sd-btn--blue:hover { background: #0069d9; }
 
-/* Blue outline button */
+/* Blue outline */
 .sd-btn--blue-outline {
-  background: #fff;
+  background: #ffffff;
   border-color: #007bff;
   color: #007bff;
 }
 .sd-btn--blue-outline:hover {
   background: #e7f1ff;
+  border-color: #006fe6;
 }
 
-/* Responsive tweaks */
+/* ===== Reduced motion (accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .sd-btn { transition: none; }
+  .sd-btn:hover, .sd-btn:active { transform: none; }
+}
+
+/* ===== Responsive tweaks ===== */
 @media (max-width: 640px) {
-  .sd-header {
-    height: 64px;
-    padding: 0 16px;
-  }
-  .sd-brand__logo {
-    width: 28px;
-    height: 28px;
-  }
-  .sd-brand__name {
-    font-size: 22px;
-  }
-  .sd-btn {
-    height: 34px;
-    padding: 0 12px;
-    font-weight: 600;
-  }
+  .sd-header { height: 64px; padding: 0 16px; }
+  .sd-brand__logo { width: 28px; height: 28px; }
+  .sd-brand__name { font-size: 22px; }
+  .sd-btn { height: 34px; padding: 0 12px; font-weight: 600; border-radius: 8px; }
 }
