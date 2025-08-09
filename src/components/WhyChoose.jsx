@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhyChooseUs.css";
+import "./WhyChoose.css";
 import secureIcon from "../assets/icons/secure.svg";
 
 export default function WhyChooseUs() {
