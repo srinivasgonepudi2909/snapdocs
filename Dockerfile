@@ -1,17 +1,20 @@
 # Build stage
 FROM node:18-alpine AS builder
-
 WORKDIR /app
 
-COPY package.json ./
-RUN npm install
+# Install deps first for better caching
+COPY package*.json ./
+RUN npm ci
 
-COPY . ./
+# Copy source
+COPY . .
+
+# Build
 RUN npm run build
 
 # Serve stage
-FROM nginx:stable-alpine
-
+FROM nginx:alpine
+# Replace default config
 RUN rm -rf /etc/nginx/conf.d
 COPY nginx.conf /etc/nginx/
 
